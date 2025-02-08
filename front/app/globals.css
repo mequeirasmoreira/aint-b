@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+/* Estilos personalizados para o DatePicker */
+.react-datepicker {
+  @apply font-sans !border-0 !shadow-none;
+}
+
+.react-datepicker__header {
+  @apply  !bg-transparent !border-0;
+}
+
+.react-datepicker__month-container {
+  @apply  !border-0;
+}
+
+.react-datepicker__day {
+  @apply  !m-1 !rounded-lg !w-8 !h-8 !leading-8;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range {
+  @apply  !bg-black !text-white;
+}
+
+.react-datepicker__day--in-selecting-range {
+  @apply  !bg-gray-200 !text-black;
+}
+
+.react-datepicker__day--keyboard-selected {
+  @apply  !bg-black !text-white;
+}
+
+.react-datepicker__navigation {
+  @apply  !top-3;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply  !border-gray-400;
+}
+
+/* Estilos para o tema escuro */
+.dark-calendar.react-datepicker {
+  @apply  !bg-neutral-800;
+}
+
+.dark-calendar .react-datepicker__header {
+  @apply  !bg-neutral-800;
+}
+
+.dark-calendar .react-datepicker__day {
+  @apply  !text-white;
+}
+
+.dark-calendar .react-datepicker__day--selected,
+.dark-calendar .react-datepicker__day--in-range {
+  @apply  !bg-black !text-white;
+}
+
+.dark-calendar .react-datepicker__day--in-selecting-range {
+  @apply  !bg-neutral-700 !text-white;
+}
+
+.dark-calendar .react-datepicker__current-month,
+.dark-calendar .react-datepicker__day-name {
+  @apply  !text-white;
+}
